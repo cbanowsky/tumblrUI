@@ -1,0 +1,404 @@
+<!-- The Baron's Theme -->
+<html>
+<head>
+    <title>{Title}</title>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    {block:Description}
+    <meta name="description" content="{MetaDescription}"/>
+    {/block:Description}
+
+    <meta name="if:Click Images for Large View" content="1"/>
+
+    <link rel="stylesheet" href="http://static.tumblr.com/kexuegc/R15mvgk5s/semantic.css"/>
+    <script src="https://dl.dropboxusercontent.com/u/47196097/semantic.min.js"></script>
+    <style type="text/css">
+
+        body {
+        -webkit-transition: margin .3s ease,-webkit-transform .3s ease;
+         transition: margin .1s ease,transform .3s ease;
+         background: #333;
+         font-family: 'blackout2_am';
+        }
+        .segment {
+           font-family: 'blackout2_am';
+        }
+        .item {
+          font-family: 'blackout2_am';
+          }
+        @font-face {
+          font-family: Icons;
+          src: url('http://commondatastorage.googleapis.com/codecdcss%2Fwebfonts%2Ficons.eot');
+          src: url(http://commondatastorage.googleapis.com/codecdcss%2Fwebfonts%2Ficons.eot?#iefix) format('embedded-opentype'),url('http://commondatastorage.googleapis.com/codecdcss%2Fwebfonts%2Ficons.woff') format('woff'),url(http://commondatastorage.googleapis.com/codecdcss%2Fwebfonts%2Ficons.ttf) format('truetype'),url(http://commondatastorage.googleapis.com/codecdcss%2Fwebfonts%2Ficons.svg) format('svg');
+          font-style: normal;
+          font-weight: 400;
+          font-variant: normal;
+          text-decoration: inherit;
+          text-transform: none;
+        }
+        @font-face {
+            font-family: 'blackout2_am';
+            src: url('https://storage.cloud.google.com/codecdcss%2Fwebfonts%2Fblackout-midnight-webfont.woff?response-content-disposition=attachment;%20filename=blackout-midnight-webfont.eot');
+            src: url('https://storage.cloud.google.com/codecdcss%2Fwebfonts%2Fblackout-midnight-webfont.woff?response-content-disposition=attachment;%20filename=blackout-2am-webfont.eot?#iefix') format('embedded-opentype'),
+                 url('https://storage.cloud.google.com/codecdcss%2Fwebfonts%2Fblackout-midnight-webfont.woff?response-content-disposition=attachment;%20filename=blackout-2am-webfont.woff') format('woff'),
+                 url('https://storage.cloud.google.com/codecdcss%2Fwebfonts%2Fblackout-midnight-webfont.woff?response-content-disposition=attachment;%20filename=blackout-2am-webfont.ttf') format('truetype'),
+                 url('https://storage.cloud.google.com/codecdcss%2Fwebfonts%2Fblackout-midnight-webfont.woff?response-content-disposition=attachment;%20filename=blackout-2am-webfont.svg#blackout2_am') format('svg');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+        .modal {
+          background: #333;
+          
+        }
+
+
+        /*******************************
+                  Responsive
+        *******************************/
+
+        @media only screen and (max-width : 1000px) {
+          feed {
+            float: none;
+            margin-bottom: 0.5em;
+          }
+        }
+
+        @media only screen and (max-width : 1250px) {
+        .left.column > .menu .item {
+            font-size: 1rem;
+          }
+        }
+
+        @media only screen and (max-width : 450px) {
+          .item {
+            font-family: 'blackout2_am';
+            font-size: 0.15em;
+            width: auto;
+        	  float: none;
+          }
+          .sidebar {
+        	  width: auto;
+        	  float: none;
+          .modal {
+            width: auto;
+            
+          }  
+        }
+
+
+
+        .ui.piled.segment {
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        #posts img {
+            margin: 1em auto;
+            display: block;
+            cursor: zoom-in;
+        }
+
+        #posts .chat {
+            text-align: left;
+            font-size: 1.3em;
+            line-height: 1.5em;
+        }
+
+        #posts .chat li {
+            list-style: none;
+        }
+
+        #posts .chat .odd .icon {
+            color: deepskyblue;
+        }
+
+        #posts .text {
+            text-align: left;
+        }
+
+        a, a label {
+            color: #017700 !important;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+        #posts .link {
+            font-size: 1.6em;
+        }
+
+        #image-modal img {
+            width: 100%;
+        }
+
+    </style>
+
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+</head>
+<body>
+<script>
+$(document)
+  .ready(function() {
+
+    $('.filter.menu .item')
+      .tab()
+    ;
+
+    $('.ui.rating')
+      .rating({
+        clearable: true
+      })
+    ;
+
+    $('.right.sidebar')
+      .sidebar('attach events', '.launch.button')
+    ;
+    $('.bottom.sidebar')
+      .sidebar('attach events', '.toggle.button')
+    ;
+
+    $('.ui.dropdown')
+      .dropdown()
+    ;
+
+  })
+;
+$('.toggle.button')
+  .removeClass('true')
+;
+$('.ui.modal')
+  .modal('attach events', '.contact.button')
+;
+
+</script>
+<script>
+    $('.ui.modal')
+    .modal()
+    ;
+</script>
+
+</div>
+  <div class="ui right sidebar menu" style="background-color: #ecf0f1">
+     <a class="item" href="http://highfashionhomeless.com">
+        Other Projects
+    </a>
+ </div>
+  <div class="ui bottom sidebar menu" style="background-color: #ecf0f1">
+  <a class="item" href="https://github.com/PoopBaron/tumblrUI">
+     <div class="ui inverted full width animated basic button">
+       <div class="visible content">
+         <i class="list icon"></i>
+       </div>
+       <div class="hidden content">
+         like? 
+         </div>
+    </div>
+   </a>
+ </div>
+<header class="ui segment">
+    <h2 class="center aligned ui header">
+        {Title}
+    </h2>
+<div class="ui transparent inverted menu">
+  <a class="item">
+     <div class="ui full width animated launch basic button">
+       <div class="visible content">
+         <i class="list icon"></i>
+       </div>
+       <div class="hidden content">
+         more
+      </div>
+    </div>
+   </a>
+   <a class="right menu toggle button item">
+     <div class="ui full width animated  basic button">
+       <div class="visible content">
+         <i class="exclamation icon"></i>
+       </div>
+       <div class="hidden content">
+        more?
+      </div>
+    </div>
+   </a>
+</div>
+<script>
+    $('ui.modal')
+    .modal()
+    ;
+</script>
+</header>
+<div class="inverted ui segment">
+  <h2 class="center aligned ui header">{Description}</h2>
+</div>
+</div>
+ <script>
+     $('.right.sidebar')
+     .sidebar('toggle')
+     ;
+     $('.bottom.sidebar')
+      .sidebar('toggle')
+    ;
+ </script>
+<div class="center aligned ui one column page grid" role="main">
+    <div id="posts" class="column">
+        {block:Posts}
+        {block:Text}
+        <article class="ui piled segment text">
+            {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3>
+            {/block:Title}
+
+            {Body}
+        </article>
+        {/block:Text}
+        {block:Photo}
+        <article class="ui piled segment">
+            <img src="{PhotoURL-500}" alt="{PhotoAlt}" class="ui rounded image"/>
+
+            <div class="ui bottom attached message">
+                {block:Caption}
+                <div class="caption">{Caption}</div>
+                {/block:Caption}
+            </div>
+        </article>
+        {/block:Photo}
+
+        {block:Chat}
+        <article class="ui piled segment">
+            {block:Title}
+            <h3><a href="{Permalink}">{Title}</a></h3>
+            {/block:Title}
+
+            <ul class="chat">
+                {block:Lines}
+                <li class="{Alt} user_{UserNumber}">
+                    {block:Label}
+                    <span class="label"><i class="user icon"></i> {Label}</span>
+                    {/block:Label}
+
+                    {Line}
+                </li>
+                {/block:Lines}
+            </ul>
+        </article>
+        {/block:Chat}
+
+        {block:Panorama}
+        <article class="ui piled segment">
+            {LinkOpenTag}
+            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+            {LinkCloseTag}
+
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+        </article>
+        {/block:Panorama}
+
+        {block:Photoset}
+        <article class="ui piled segment">
+            {Photoset-500}
+
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+        </article>
+        {/block:Photoset}
+
+        {block:Quote}
+        <article class="ui piled segment">
+            "{Quote}"
+
+            {block:Source}
+            <div class="source">{Source}</div>
+            {/block:Source}
+        </article>
+        {/block:Quote}
+        {block:Link}
+        <article class="ui piled segment link">
+            <a href="{URL}" class="link" {Target}>{Name}</a>
+
+            {block:Description}
+            <div class="description">{Description}</div>
+            {/block:Description}
+        </article>
+        {/block:Link}
+        {block:Audio}
+        <article class="ui piled segment">
+            {AudioPlayerBlack}
+
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+        </article>
+        {/block:Audio}
+
+        {block:Video}
+        <article class="ui piled segment">
+            {Video-500}
+
+            {block:Caption}
+            <div class="caption">{Caption}</div>
+            {/block:Caption}
+        </article>
+        {/block:Video}
+
+
+
+
+        {block:HasTags}
+        <div class="tags">
+            {block:Tags}
+            <a href="{TagURL}">
+                <label class="ui label">{Tag}</label>
+            </a>
+            {/block:Tags}
+        </div>
+        {/block:HasTags}
+        {/block:Posts}
+    </div>
+</div>
+<footer id="footer">
+    {block:PreviousPage}
+    <a href="{PreviousPage}">&#171; Previous</a>
+    {/block:PreviousPage}
+
+    {block:NextPage}
+    <a href="{NextPage}">Next &#187;</a>
+    {/block:NextPage}
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://static.tumblr.com/kexuegc/PMVmvgof1/semantic.min.js"></script>
+
+{block:IfClickImagesforLargeView}
+
+<script>
+    (function () {
+        var $img_modal = $('#image-modal');
+        var $content = $img_modal.find('.content');
+
+        $(document).on('click', 'img', function () {
+            var $img = $(this);
+
+            // check if the image is inside a link
+            // if so, just let the link do its thing
+            if ( $img.parents('a').length ) {
+                return;
+            }
+
+            $content.empty();
+            $content.append($img.clone()[0]);
+            $img_modal.modal('show');
+            return false;
+        });
+    }).call(this);
+</script>
+{/block:IfClickImagesforLargeView}
+
+
+
+<script type="text/javascript" src="http://codysherman.tumblr.com/tools/infinite-scrolling/code"></script>
+</body>
+
+</html>
