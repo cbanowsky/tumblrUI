@@ -7,5 +7,5 @@ This is a tumblr theme built with Semantic UI.  Has both right and bottom animat
 
 If you want to fork the repo and make changes, that is cool too.  
 
-## Todo:
+## To Do:
 - Make asset links reflect tumblr uploaded file structure rather than hosted offsite.
